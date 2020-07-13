@@ -1,4 +1,3 @@
-
 <template>
 	<div>
 		<div class="row justify-content-center">
@@ -27,7 +26,9 @@
           </div>
         </div>
         <div class="form-group">
-          <a href="index.html" class="btn btn-primary btn-block">Login</a>
+          <button type="submit" class="btn btn-primary btn-block">Login
+          </button>
+          
         </div>
         <hr>
        
@@ -57,13 +58,17 @@ export default {
       form:{
         email: null,
         password: null
-      },
-      errors:{}
+      }
+     
     }
   },
   methods:{
     login(){
-      alert('done');
+     
+      axios.post('api/auth/login',this.form)
+      .then(res =>User.responseAfterLogin(res))
+      .catch(error =>console.log(error.response))
+      
     }
   }
   }
