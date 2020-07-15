@@ -19,6 +19,16 @@ let supplier = require('./components/supplier/index.vue').default;
 let editsupplier = require('./components/supplier/edit.vue').default;
 
 
+// Category Component
+let Storecategory = require('./components/category/create.vue').default;
+let category = require('./components/category/index.vue').default;
+let editcategory = require('./components/category/edit.vue').default;
+
+// Product  Component
+let Storeproduct = require('./components/product/create.vue').default;
+let product = require('./components/product/index.vue').default;
+let editproduct = require('./components/product/edit.vue').default;
+
 let home = require('./components/home.vue').default;
 
 
@@ -42,6 +52,15 @@ export const routes = [
   { path: '/store-supplier', component: Storesupplier, name:'store-supplier'},
   { path: '/supplier', component: supplier, name:'supplier'},
   { path: '/edit-supplier/:id', component: editsupplier, name:'edit-supplier'},
+  
+   // Category  Route   Start 
+   { path: '/store-category', component: Storecategory, name:'store-category'},
+   { path: '/category', component: category, name:'category'},
+   { path: '/edit-category/:id', component: editcategory, name:'edit-category'},
+   // Product   Route   Start 
+   { path: '/store-product', component: Storeproduct, name:'store-product'},
+   { path: '/product', component: product, name:'product'},
+   { path: '/edit-product/:id', component: editproduct, name:'edit-product'},
 
 
 
