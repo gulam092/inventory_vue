@@ -24,12 +24,12 @@
     $route.path === '/register' || $route.path === '/forget'
     ? false :true" style="display: none;">
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <router-link to= "/home" class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
           <img src="backend/img/logo/logo2.png">
         </div>
         <div class="sidebar-brand-text mx-3">RuangAdmin</div>
-      </a>
+      </router-link>
       <hr class="sidebar-divider my-0">
       <li class="nav-item active">
         <router-link to ="/home" class="nav-link">
@@ -65,8 +65,8 @@
         <div id="collapseBootstrap1" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
            
-            <router-link to="" class="collapse-item">Add Supplies</router-link>
-            <router-link to="" class="collapse-item">All Supplies</router-link>
+            <router-link to="/store-supplier" class="collapse-item">Add Supplies</router-link>
+            <router-link to="/supplier" class="collapse-item">All Supplies</router-link>
             
           </div>
         </div>
